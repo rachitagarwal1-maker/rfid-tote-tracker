@@ -1,0 +1,273 @@
+/* General Styles & Font Import */
+:root {
+    --primary-color: #28a745; /* Main Green */
+    --primary-color-dark: #218838; /* Darker Green for Hover */
+    --background-color: #f0fdf4; /* Very Faded Green Background */
+    --card-bg-color: #ffffff;
+    --text-color: #333;
+    --border-color: #d1e7dd;
+    --header-text-color: #084224;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Login Page Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-card {
+    background-color: var(--card-bg-color);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-card h1 {
+    color: var(--header-text-color);
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.error-message {
+    color: #dc3545;
+    margin-bottom: 15px;
+    height: 1em; /* Reserve space to prevent layout shift */
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content-full {
+    flex-grow: 1;
+    padding: 24px 32px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header h2 {
+    margin: 0;
+    color: var(--header-text-color);
+    font-weight: 700;
+}
+
+.user-profile {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Homepage Menu */
+.homepage-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.menu-button {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--header-text-color);
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.menu-icon {
+    margin-bottom: 16px;
+    color: var(--primary-color);
+}
+
+/* Card Styling (for Locate Page) */
+.card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.card-body {
+    padding: 24px;
+}
+
+/* Form & Button Styles */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.25);
+}
+
+.form-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+button, .btn-secondary {
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+button:active, .btn-secondary:active {
+    transform: scale(0.98);
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.filters .form-group {
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+.filters .btn-submit {
+    width: auto; /* Override full-width */
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto; /* Allows horizontal scrolling on small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+thead th {
+    background-color: var(--background-color);
+    font-weight: 500;
+    color: var(--header-text-color);
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Status Badges */
+.status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+}
+
+.status.created { background-color: #007bff; } /* Blue for 'Created' */
+.status.complete { background-color: var(--primary-color); } /* Green for 'Complete' */
+.status.terminated { background-color: #dc3545; } /* Red for 'Terminated' */
+
