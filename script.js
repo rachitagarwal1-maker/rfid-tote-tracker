@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Username: Rachit, Password: 1234
             if (usernameInput === 'Rachit' && passwordInput === '1234') {
                 // If correct, show success and redirect to the homepage
-                console.log('Login successful!');
+                console.log('Login successful! Redirecting to dashboard...');
                 errorMessage.textContent = ''; // Clear any previous error messages
                 
-                // Redirect to the main homepage
+                // **THE FIX IS HERE:** Redirect to the new dashboard.html page
                 window.location.href = 'dashboard.html';
 
             } else {
@@ -32,4 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
 
