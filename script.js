@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 errorMessage.textContent = ''; // Clear any previous error messages
                 
                 // Redirect to the main homepage
-                window.location.href = 'index.html';
+                window.location.href = 'dashboard.html';
 
             } else {
                 // If incorrect, show an error message
@@ -32,3 +32,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
